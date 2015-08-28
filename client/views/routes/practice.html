@@ -1,0 +1,24 @@
+<h2>Here is Today's Suggested Practice Activity</h2>
+
+
+<div class="practiceitem" ng-controller="PracticeController">
+        <ul ng-repeat="response in responses">
+            <li>{{response.title}}</li><br>
+            <li>{{response.description}}</li><br>
+            <li><img ng-src={{response.imgurl}}></li>
+        </ul>
+        <!--<button ng-click="submit('switchup')">New Lesson</button>-->
+    <!--&lt;!&ndash;<p ng-show="cat.name">Your new cats name is: {{ cat.name }}</p>&ndash;&gt;-->
+    <!--&lt;!&ndash;<p ng-hide="cat.name">Enter your new cat's name!</p>&ndash;&gt;-->
+
+</div>
+
+<div class="timer" ng-controller="TimerController">
+    <h2>Timer</h2>
+    {{counter}}
+
+    <!--<button type="submit">Add Time</button>-->
+    <button ng-click="countdown()">Start</button>
+    <button ng-click="stop()">Stop</button>
+</div>
+</div>

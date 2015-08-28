@@ -1,0 +1,23 @@
+{
+  "Beginner": {
+    "title": "G, C, D",
+    "description": "The I, IV, V turn-around pattern is common in most forms of music.  Getting good at alternating between chords in this pattern is one of the most important skills as a beginner",
+    "motivationline": "Give it a Go!",
+    "imgurl": "/assets/images/gcd.png"
+  },
+
+  "Beginner": {
+    "title": "A, D, E",
+    "description": "The I, IV, V turn-around pattern is common in most forms of music.  Getting good at alternating between chords in this pattern is one of the most important skills as a beginner",
+    "motivationline": "Give it a Go!",
+    "imgurl": "/assets/images/gcd.png"
+  },
+
+  "Beginner": {
+    "title": "B, E, F#",
+    "description": "The I, IV, V turn-around pattern is common in most forms of music.  Getting good at alternating between chords in this pattern is one of the most important skills as a beginner",
+    "motivationline": "Give it a Go!",
+    "imgurl": "/assets/images/gcd.png"
+  }
+
+}
