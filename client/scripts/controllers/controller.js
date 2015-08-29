@@ -1,5 +1,4 @@
 myApp.controller('SomeController', ['$scope', '$http', function($scope, $http){
-    $scope.thing ="Some controller";
     $scope.responses = {};
     console.log("Some Controller");
 
@@ -16,32 +15,86 @@ myApp.controller('SomeController', ['$scope', '$http', function($scope, $http){
     $scope.submit();
 }]);
 
-myApp.controller('AnotherController', ['$scope', function($scope){
-    $scope.thing = "Here is another thing";
-    console.log("Another Controller");
+myApp.controller("BeginnerController", ['$scope', '$http', '$location', function($scope, $http, $location){
+
+    console.log("BeginnerController");
+    $scope.responses = {};
+
+    $scope.submit = function() {
+         $http.get('data/beginner.json').then(function(response){
+            if(response.status !==200){
+                throw new Error("Failed to pull data from the API");
+            }
+             $scope.responses = response;
+            console.log(response);
+
+        });
+        $scope.changeRoute = function(){
+            $location.path('beginner');
+        };
+
+    };
+    $scope.submit();
+
+}]);
+
+myApp.controller("IntermediateController", ['$scope', '$http', '$location', function($scope, $http, $location){
+    $scope.responses = {};
+    console.log("IntermediateController");
+    $scope.submit = function() {
+        $http.get('data/intermediate.json').then(function(response){
+            if(response.status !==200){
+                throw new Error("Failed to pull data from the API");
+            }
+            $scope.responses = response;
+            console.log(response);
+        })
+    };
+
+    $scope.changeRoute = function(){
+        $location.path('intermediate');
+    };
+
+    $scope.submit();
+
+}]);
+
+
+myApp.controller("AdvancedController", ['$scope', '$http', '$location', function($scope, $http, $location){
+    console.log("AdvancedController");
+    $scope.responses = {};
+    $scope.submit = function() {
+        $http.get('data/advanced.json').then(function(response){
+            if(response.status !==200){
+                throw new Error("Failed to pull data from the API");
+            }
+            $scope.responses = response;
+            console.log(response);
+        })
+    };
+
+    $scope.changeRoute = function(){
+        $location.path('advanced');
+    };
+
+    $scope.submit();
 
 }]);
 
 myApp.controller("PracticeController", ['$scope', '$http', '$location', function($scope, $http, $location){
 
-    $scope.submit = function(level) {
-         $http.get('data/practice.json').then(function(response){
-            if(response.status !==200){
-                throw new Error("Failed to pull data from the API");
-            }
-            console.log(response);
-        })
-    };
-
-
-    $scope.changeRoute = function(){
-        $location.path('practice');
+    $scope.changeRoute = function(level){
+        $location.path(level);
     };
 
 }]);
 
 
+
+
+//This is the controller for a the timer on the practice page
 myApp.controller("TimerController",['$scope', '$timeout', function($scope,$timeout){
+
     var mytimeout = $timeout($scope.onTimeout,1000);
         $scope.counter = 100;
     var stopped;
@@ -60,8 +113,3 @@ myApp.controller("TimerController",['$scope', '$timeout', function($scope,$timeo
     }
 }]);
 
-            //CREATE THE FUNCTION TO CALCULATE THE COUNTDOWN TIMER
-
-//    }
-//
-//}]);

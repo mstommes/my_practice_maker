@@ -1,15 +1,20 @@
 <h2>Here is Today's Suggested Practice Activity</h2>
 
 
-<div class="practiceitem" ng-controller="PracticeController">
-        <ul ng-repeat="response in responses">
-            <li>{{response.title}}</li><br>
-            <li>{{response.description}}</li><br>
-            <li><img ng-src={{response.imgurl}}></li>
-        </ul>
-        <!--<button ng-click="submit('switchup')">New Lesson</button>-->
-    <!--&lt;!&ndash;<p ng-show="cat.name">Your new cats name is: {{ cat.name }}</p>&ndash;&gt;-->
-    <!--&lt;!&ndash;<p ng-hide="cat.name">Enter your new cat's name!</p>&ndash;&gt;-->
+<div class="practiceitem">
+    <ul ng-repeat="response in responses">
+        <li>{{response.title}}</li><br>
+        <li>{{response.description}}</li><br>
+        <li><img ng-src={{response.imgurl}}></li>
+    </ul>
+    <!--<button ng-click="submit('switchup')">New Lesson</button>-->
+    <!--<button ng-click="submit()">test button</button>-->
+
+</div>
+
+
+
+
 
 </div>
 

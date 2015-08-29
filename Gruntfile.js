@@ -81,16 +81,11 @@ module.exports = function (grunt) {
             style: {
                 expand: true,
                 cwd: 'client',
-                src: "styles/style.css",
-                dest: "server/public/assets/"
-            },
-            bootstrap: {
-                expand: true,
-                cwd: 'node_modules',
                 src: [
-                    "bootstrap/dist/css/bootstrap.min.css"
+                    "styles/style.css",
+                    "styles/angularstyles.css"
                 ],
-                "dest": "server/public/vendors/"
+                dest: "server/public/assets/"
             },
             fontAwesome: {
                 expand: true,
