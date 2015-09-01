@@ -1,29 +1,23 @@
 <h2>Here is Today's Suggested Practice Activity</h2>
 
 
-<div class="practiceitem">
-    <ul ng-repeat="response in responses">
-        <li>{{response.title}}</li><br>
-        <li>{{response.description}}</li><br>
-        <li><img ng-src={{response.imgurl}}></li>
-    </ul>
-    <!--<button ng-click="submit('switchup')">New Lesson</button>-->
-    <!--<button ng-click="submit()">test button</button>-->
+<div layout="row" class="practiceitem" ng-repeat='lesson in responses'>
+            <p>{{lesson.title}}</p>
+            <p>{{lesson.description}}</p>
+            <p><img ng-src={{lesson.imgurl}}></p>
 
 </div>
 
+<md-button class="md-raised" ng-click="previousLesson()">Previous Lesson</md-button>
+<md-button class="md-raised" ng-click="nextLesson()">Next Lesson</md-button>
 
 
 
-
-</div>
-
-<div class="timer" ng-controller="TimerController">
+<div layout="row" class="timer" ng-controller="TimerController">
     <h2>Timer</h2>
-    {{counter}}
-
-    <!--<button type="submit">Add Time</button>-->
-    <button ng-click="countdown()">Start</button>
-    <button ng-click="stop()">Stop</button>
-</div>
+    <div layout="row" class="formattedtime">{{formattedTime}}</div>
+    <!--<md-button class="md-raised" ng-click="addMinute()">Add 1 Minute</md-button>-->
+    <!--<md-button class="md-raised" ng-click="addFiveMin()">Add 5 Minutes</md-button>-->
+    <md-button class="md-raised" ng-click="startCountdown()">Start</md-button>
+    <md-button class="md-raised" ng-click="stop()">Stop</md-button>
 </div>

@@ -1,6 +1,20 @@
-{
+[
+  {
+    "title": "B, E, F#",
+    "description": "The I, IV, V turn-around pattern is common in most forms of music.  Getting good at alternating between chords in this pattern is one of the most important skills as a beginner",
+    "imgurl": "/assets/images/gcd.png",
+    "currentLesson": "0"
+  },
+  {
+    "title": "A, D, E",
+    "description": "Now practice the he I, IV, V using alternating picking pattern--SLOWLY",
+    "imgurl": "/assets/images/gcd.png",
+    "currentLesson": "1"
+  },
+  {
     "title": "B7, E7, F#7",
     "description": "Now practice the he I, IV, V using alternating picking pattern--SLOWLY",
-    "imgurl": "/assets/images/gcd.png"
-
-}
+    "imgurl": "/assets/images/gcd.png",
+    "currentLesson":"2"
+  }
+]

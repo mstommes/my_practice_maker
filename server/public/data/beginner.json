@@ -1,6 +1,41 @@
-{
-  "title": "B, E, F#",
-  "description": "The I, IV, V turn-around pattern is common in most forms of music.  Getting good at alternating between chords in this pattern is one of the most important skills as a beginner",
-  "imgurl": "/assets/images/gcd.png"
-}
+[
+  {
+    "title": "C Major Chord",
+    "description": "Practice the chord position and strumming in a down, down, up, up, down, up pattern.",
+    "imgurl": "/assets/images/C_Chord.png",
+    "show" : "true"
+  },
 
+
+  {
+    "title": "D Major Chord",
+    "description": "Practice the chord position and strumming in a down, down, up, up, down, up pattern.",
+    "imgurl": "/assets/images/d_chord.png"
+  },
+
+  {
+    "title": "E Major Chord",
+    "description": "Practice the chord position and strumming in a down, down, up, up, down, up pattern.",
+    "imgurl": "/assets/images/E_chord.png"
+  },
+  {
+    "title": "F Major Chord",
+    "description": "Practice the chord position and strumming in a down, down, up, up, down, up pattern.",
+    "imgurl": "/assets/images/F_chord.png"
+  },
+  {
+    "title": "G Major Chord",
+    "description": "Practice the chord position and strumming in a down, down, up, up, down, up pattern.",
+    "imgurl": "/assets/images/g_chord.png"
+  },
+  {
+    "title": "A Major Chord",
+    "description": "Practice the chord position and strumming in a down, down, up, up, down, up pattern.",
+    "imgurl": "/assets/images/A_chord.png"
+  },
+  {
+    "title": "B Major Chord",
+    "description": "Practice the chord position and strumming in a down, down, up, up, down, up pattern.",
+    "imgurl": "/assets/images/b_chord.png"
+  }
+]

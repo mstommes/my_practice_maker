@@ -8,16 +8,19 @@ body{
     display: block;
     background-color:#191970;
     width:100%;
-    height: 2em;
+    height: 3em;
 }
 
 li {
     display: inline;
     padding-right: 10px;
     list-style: none;
-
-
+    font-size: 16px;
 }
+
+
+
+
 a {
     color: #FFFFFF;
     text-decoration: none;
@@ -53,11 +56,8 @@ footer {
     display: inline;
     width: 175px;
 
+}
 
-}
-button {
-    border-radius: 5px;
-}
 
 aside {
 
@@ -72,8 +72,19 @@ aside {
     float:right;
 }
 
-.practiceitem {
+
+
+.active {
     display: block;
     width: 40%;
     float: left;
+    padding-bottom: -20px;
 }
+
+.practiceitem {
+    display: block;
+    width: 420px;
+    height: 500px;
+    float: left;
+}
+
