@@ -5,6 +5,7 @@
  * Version: 0.12.1 - 2015-02-20
  * License: MIT
  */
+console.log("Yo");
 angular.module("ui.bootstrap", ["ui.bootstrap.transition","ui.bootstrap.collapse","ui.bootstrap.accordion","ui.bootstrap.alert","ui.bootstrap.bindHtml","ui.bootstrap.buttons","ui.bootstrap.carousel","ui.bootstrap.dateparser","ui.bootstrap.position","ui.bootstrap.datepicker","ui.bootstrap.dropdown","ui.bootstrap.modal","ui.bootstrap.pagination","ui.bootstrap.tooltip","ui.bootstrap.popover","ui.bootstrap.progressbar","ui.bootstrap.rating","ui.bootstrap.tabs","ui.bootstrap.timepicker","ui.bootstrap.typeahead"]);
 angular.module('ui.bootstrap.transition', [])
 
@@ -18,7 +19,7 @@ angular.module('ui.bootstrap.transition', [])
  * @return {Promise}  A promise that is resolved when the transition finishes.
  */
 .factory('$transition', ['$q', '$timeout', '$rootScope', function($q, $timeout, $rootScope) {
-
+console.log("-------Factory Loaded-------")
   var $transition = function(element, trigger, options) {
     options = options || {};
     var deferred = $q.defer();
@@ -494,6 +495,7 @@ angular.module('ui.bootstrap.carousel', ['ui.bootstrap.transition'])
   };
 
   $scope.next = function() {
+    console.log("Next Slide Called");
     var newIndex = (currentIndex + 1) % slides.length;
 
     //Prevent this user-triggered transition from occurring if there is already one in progress
@@ -503,6 +505,7 @@ angular.module('ui.bootstrap.carousel', ['ui.bootstrap.transition'])
   };
 
   $scope.prev = function() {
+    console.log("Prev Slide Called");
     var newIndex = currentIndex - 1 < 0 ? slides.length - 1 : currentIndex - 1;
 
     //Prevent this user-triggered transition from occurring if there is already one in progress

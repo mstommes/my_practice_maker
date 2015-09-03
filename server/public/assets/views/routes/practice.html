@@ -1,16 +1,27 @@
-<h2>Here is Today's Suggested Practice Activity</h2>
-
-    <div  class="slide" ng-repeat="lesson in responses">
-                <p>Practice Title: {{lesson.title}}</p>
-                <p>Lesson Description: {{lesson.description}}</p>
-                <img ng-src={{lesson.imgurl}}>
-            </div>
-
-
 
 <div layout="row" class="timer" ng-controller="TimerController">
-    <h5>Timer: </h5>
+    <h4>Timer: </h4>
     <div class="formattedtime">{{formattedTime}}</div>
-    <md-button class="md-raised" ng-click="startCountdown()">Start</md-button>
-    <md-button class="md-raised" ng-click="stop()">Stop</md-button>
+    <button ng-click="startCountdown()">Start</button>
+    <button ng-click="stop()">Stop</button>
+    <button ng-click="addTime()">Add 5 Minutes</button>
 </div>
+
+
+<h2>Here is Today's Suggested Practice Activity</h2>
+<div>
+    <carousel >
+        <slide ng-repeat="lesson in slides" active="slide.active">
+            <p>Practice Title: {{lesson.title}}</p>
+            <p>Lesson Description: {{lesson.description}}</p>
+            <img ng-src="{{lesson.imgurl}}">
+            <div class="carousel-caption">
+            </div>
+        </slide>
+    </carousel>
+</div>
+</div>
+
+
+
+

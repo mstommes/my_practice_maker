@@ -2,13 +2,13 @@
     <form>
     <label>User Name: <input type="text" placeholder="username"></label>
     <label>Password: <input type="password" placeholder="password"></label>
-        <md-button class="md-raised" type="submit">Submit</md-button>
-        <md-button class="md-raised" type="submit">New User</md-button>
+        <button class="button" type="submit">Submit</button>
+        <button class="button" type="submit">New User</button>
     </form>
     </aside>
     <div ng-controller="PracticeController">
         <p>Select Desired Practice Level</p>
-        <md-button class="md-raised" ng-click="changeRoute('/beginner')">Beginner/Chords</md-button>
+        <button class="button" ng-click="changeRoute('/beginner')">Beginner/Chords</button>
         <!--<md-button class="md-raised" ng-click="changeRoute('/intermediate')">Intermediate</md-button>-->
-        <md-button class="md-raised" ng-click="changeRoute('/advanced')">Advanced/Scales</md-button>
+        <button class="button" ng-click="changeRoute('/advanced')">Advanced/Scales</button>
     </div>

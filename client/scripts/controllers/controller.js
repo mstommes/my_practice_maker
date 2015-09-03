@@ -9,11 +9,13 @@ myApp.controller("PracticeController", ['$scope', '$http', '$location', function
 }]);
 
 
-
-myApp.controller("BeginnerController", ['$scope', '$http', '$location', function($scope, $http, CarouselService){
-    $scope.carousel = CarouselService.carousel;
+myApp.controller("BeginnerController", ['$scope', '$http', '$location',  function($scope, $http){
     console.log("BeginnerController");
-    $scope.responses = [];
+    $scope.slides = [];
+    //$scope.myInterval = 5000;
+    $scope.noWrapSlides = false;
+
+
     $scope.submit = function() {
         $http.get('data/beginner.json').then(function(response) {
             if (response.status !== 200) {
@@ -27,36 +29,30 @@ myApp.controller("BeginnerController", ['$scope', '$http', '$location', function
                     imgurl : response.data[i].imgurl
                 };
 
-                $scope.responses.push(lesson);
+
+                //$scope.responses.push(lesson);
+                $scope.slides.push(lesson);
 
                 console.log(response.data[i].title + "this is the for loop response");
                 console.log(response.data[i].description + "this is the for loop response");
                 console.log(response.data[i].imgurl + "this is the for loop response");
             }
+            console.log($scope.slides);
         });
     };
 
-    $scope.submit();
-
-
-
-
-
+    $scope.submit()
 
 }]);
-
-myApp.factory('CarouselService', function(){
-    var name = "maria";
-    return name;
-
-});
 
 
 
 
 myApp.controller("AdvancedController", ['$scope', '$http', '$location', function($scope, $http){
-    console.log("AdvancedController");
-    $scope.responses = [];
+    $scope.slides = [];
+
+    $scope.noWrapSlides = false;
+
     $scope.submit = function() {
         $http.get('data/advanced.json').then(function(response){
             if(response.status !==200){
@@ -70,7 +66,7 @@ myApp.controller("AdvancedController", ['$scope', '$http', '$location', function
                     imgurl : response.data[i].imgurl
                 };
 
-                $scope.responses.push(lesson);
+                $scope.slides.push(lesson);
 
                 console.log(response.data[i].title + "this is the for loop response");
                 console.log(response.data[i].description + "this is the for loop response");
@@ -85,11 +81,11 @@ myApp.controller("AdvancedController", ['$scope', '$http', '$location', function
 }]);
 
 
-
 //This is the controller for a the timer on the practice page
-myApp.controller("TimerController",['$scope', '$timeout', '$interval', function($scope, $timeout, $interval) {
-    $scope.formattedTime;
+myApp.controller("TimerController",['$scope', '$timeout',  function($scope, $timeout) {
+
     $scope.counter = 600;
+    $scope.formattedTime = convertTime($scope.counter);
     $scope.startCountdown = function() {
         stopped = $timeout(function() {
             $scope.counter--;
@@ -102,8 +98,12 @@ myApp.controller("TimerController",['$scope', '$timeout', '$interval', function(
         $timeout.cancel(stopped);
 
     }
-}]);
+    $scope.addTime = function(){
+        $scope.counter+=300;
+        $scope.formattedTime = convertTime($scope.counter);
 
+    }
+}]);
 
 
 function convertTime(seconds){
@@ -143,11 +143,10 @@ myApp.controller("IntermediateController", ['$scope', '$http', '$location', func
                 throw new Error("Failed to pull data from the API");
             }
             $scope.responses = response.data;
-            console.log($scope.responses + "this is the first response");
-            console.log($scope.responses + "this is the second response");
+
         });
     };
-
     $scope.submit();
 
 }]);
+
