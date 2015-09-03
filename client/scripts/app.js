@@ -1,5 +1,4 @@
-var myApp = angular.module('myApp',['ngRoute', 'appControllers', 'ngMaterial']);
-
+var myApp = angular.module('myApp',['ngRoute', 'appControllers', 'ngAnimate', 'ui.bootstrap', 'ngMaterial']);
 
 
 var appControllers = angular.module('appControllers',[]);

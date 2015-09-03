@@ -26,6 +26,16 @@ module.exports = function (grunt) {
                 ],
                 "dest": "server/public/vendors/"
             },
+            angularBootstrap: {
+                expand: true,
+                cwd: 'node_modules',
+                src: [
+                    "angular-bootstrap/ui-bootstrap.min.js",
+                    "angular-bootstrap/ui-bootstrap-tpls.min.js"
+
+                ],
+                "dest": "server/public/vendors/"
+            },
             angularRoute: {
                 expand: true,
                 cwd: 'node_modules',
@@ -56,6 +66,16 @@ module.exports = function (grunt) {
                 cwd: 'node_modules',
                 src: [
                     "angular-animate/angular-animate.min.js"
+                ],
+                "dest": "server/public/vendors/"
+            },
+            bootstrap: {
+                expand: true,
+                cwd: 'node_modules',
+                src: [
+                    "bootstrap/dist/fonts/glyphicons-halflings-regular.woff",
+                    "bootstrap/dist/fonts/glyphicons-halflings-regular.woff2",
+                    "bootstrap/dist/fonts/glyphicons-halflings-regular.ttf"
                 ],
                 "dest": "server/public/vendors/"
             },

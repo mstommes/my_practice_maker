@@ -1,20 +1,33 @@
 [
   {
-    "title": "B, E, F#",
-    "description": "The I, IV, V turn-around pattern is common in most forms of music.  Getting good at alternating between chords in this pattern is one of the most important skills as a beginner",
-    "imgurl": "/assets/images/gcd.png",
-    "currentLesson": "0"
-  },
-  {
-    "title": "A, D, E",
-    "description": "Now practice the he I, IV, V using alternating picking pattern--SLOWLY",
-    "imgurl": "/assets/images/gcd.png",
+    "title": "Minor Pentatonic Shape 1 (G Shape)",
+    "description": "Practice playing each note as you play the scale. The red notes are root notes.",
+    "imgurl": "/assets/images/minorpent/min_pent_shape1.png",
     "currentLesson": "1"
   },
   {
-    "title": "B7, E7, F#7",
-    "description": "Now practice the he I, IV, V using alternating picking pattern--SLOWLY",
-    "imgurl": "/assets/images/gcd.png",
-    "currentLesson":"2"
+    "title": "Minor Pentatonic Shape 2 (E Shape)",
+    "description": "Practice playing each note as you play the scale. The red notes are root notes.",
+    "imgurl": "/assets/images/minorpent/minor_pent_shape2.png",
+    "currentLesson": "2"
+  },
+  {
+    "title": "Minor Pentatonic Shape 3 (D Shape)",
+    "description": "Practice playing each note as you play the scale. The red notes are root notes.",
+    "imgurl": "/assets/images/minorpent/min_pent_shape3.png",
+    "currentLesson": "3"
+  },
+  {
+    "title": "Minor Pentatonic Shape 4 (C Shape)",
+    "description": "Practice playing each note as you play the scale. The red notes are root notes.",
+    "imgurl": "/assets/images/minorpent/min_pent_shape4.png",
+    "currentLesson": "4"
+  },
+  {
+    "title": "Minor Pentatonic Shape 5 (A Shape)",
+    "description": "Practice playing each note as you play the scale. The red notes are root notes.",
+    "imgurl": "/assets/images/minorpent/min_pent_shape5.png",
+    "currentLesson": "5"
   }
+
 ]

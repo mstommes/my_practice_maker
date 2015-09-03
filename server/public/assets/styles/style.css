@@ -60,7 +60,6 @@ footer {
 
 
 aside {
-
     display: block;
     width: 20%;
     float: left;
@@ -73,22 +72,4 @@ aside {
 }
 
 
-
-.active {
-    display: block;
-    width: 40%;
-    float: left;
-    padding-bottom: -20px;
-}
-
-.practiceitem {
-    display: block;
-    width: 420px;
-    height: 500px;
-    float: left;
-}
-
-.practiceitem p {
-    display: inline-block;
-
-}
+/************************Slider CSS*****************************/
